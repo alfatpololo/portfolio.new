@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
         sections.forEach((section) => {
           const element = document.querySelector(section);
-          if (element && window.scrollY >= element.offsetTop - 50) {
+          if (element instanceof HTMLElement && window.scrollY >= element.offsetTop - 50) {
             active = section;
           }
         });
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
     setMenuOpen(false); // Tutup menu saat navigasi
     setActiveSection(section);
     const element = document.querySelector(section);
-    if (element) {
+    if (element instanceof HTMLElement) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
