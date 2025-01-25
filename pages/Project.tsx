@@ -40,7 +40,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Crypnative",
-    subtitle: "Connected Payment Solutions for Your Business Success.",
+    subtitle: "Free Online Image Editor",
     imgSrc: "/Crypnative.png",
     url: "https://example.com/project3", // Ganti dengan URL tujuan
   },
