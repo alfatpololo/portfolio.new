@@ -17,7 +17,10 @@ const Contact: React.FC = () => {
               <div className="absolute top-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
-              <a href="/path/to/your-cv" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/Muhammad Alfath Aditya.pdf"
+                download="Muhammad Alfath Aditya.pdf"
+              >
                 <FaFileAlt className="text-gray-400 w-8 h-8 lg:w-10 lg:h-10 transition-all duration-300 group-hover:translate-y-[-5px]" />
               </a>
               <span className="absolute bottom-5 text-gray-400 text-sm font-semibold opacity-0 group-hover:opacity-100 group-hover:translate-y-[-5px] transition-all duration-300">
@@ -27,12 +30,15 @@ const Contact: React.FC = () => {
 
             {/* Kotak kedua */}
             <div className="group relative flex flex-col justify-center items-center bg-transparent p-4 lg:p-5 rounded-md shadow-md border-2 border-purple-800 w-[150px] h-[150px] lg:w-[180px] lg:h-[180px] transition-all duration-300 hover:bg-gray-950">
-              {/* Kotak kecil di luar sudut */}
               <div className="absolute top-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute top-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
-              <a href="https://www.linkedin.com/in/alfat-pololo" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/muhammadalfathaditya/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin className="text-gray-400 w-8 h-8 lg:w-10 lg:h-10 transition-all duration-300 group-hover:translate-y-[-5px]" />
               </a>
               <span className="absolute bottom-5 text-gray-400 text-sm font-semibold opacity-0 group-hover:opacity-100 group-hover:translate-y-[-5px] transition-all duration-300">
@@ -43,19 +49,21 @@ const Contact: React.FC = () => {
 
           {/* Kotak ketiga di bawah, ditengah */}
           <div className="group relative flex flex-col justify-center items-center bg-transparent p-4 lg:p-5 rounded-md shadow-md border-2 border-purple-800 w-[150px] h-[150px] lg:w-[180px] lg:h-[180px] transition-all duration-300 hover:bg-gray-950">
-            {/* Kotak kecil di luar sudut */}
             <div className="absolute top-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
             <div className="absolute top-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
             <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
             <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto:alfat.pololo@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTelegramPlane className="text-gray-400 w-8 h-8 lg:w-10 lg:h-10 transition-all duration-300 group-hover:translate-y-[-5px]" />
             </a>
             <span className="absolute bottom-5 text-gray-400 text-sm font-semibold opacity-0 group-hover:opacity-100 group-hover:translate-y-[-5px] transition-all duration-300">
               Send Email
             </span>
           </div>
-
         </div>
       </section>
     </>

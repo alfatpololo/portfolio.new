@@ -27,7 +27,7 @@ const projects: Project[] = [
     id: 3,
     title: "Legacy Of The Ancients : ELDORIA",
     subtitle: "Epic RPG adventure in a mythical realm.",
-    imgSrc: "/Eldoria.png",
+    imgSrc: "/Eldoria.gif",
     url: "https://example.com/project3", // Ganti dengan URL tujuan
   },
   {
@@ -38,10 +38,59 @@ const projects: Project[] = [
     url: "https://example.com/project3", // Ganti dengan URL tujuan
   },
   {
-    id: 4,
+    id: 5,
     title: "Crypnative",
     subtitle: "Free Online Image Editor.",
     imgSrc: "/Crypnative.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 6,
+    title: "Glyph AI",
+    subtitle: "Blockchain Landing Page.",
+    imgSrc: "/Glyph AI.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 7,
+    title: "Bitreon",
+    subtitle: "Code Generator AI.",
+    imgSrc: "/Bitreon.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 8,
+    title: "Denode",
+    subtitle: "Cloud Computing Landing Page.",
+    imgSrc: "/Denode.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 9,
+    title: "Injection Protocol",
+    subtitle: "The World's AI Platform.",
+    imgSrc: "/Injection Protocol.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 10,
+    title: "Mingle",
+    subtitle: "Free Chat Bot AI.",
+    imgSrc: "/Mingle.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 11,
+    title: "Podsphere",
+    subtitle: "Podcast Stream Landing Page.",
+    imgSrc: "/Podsphere.png",
+    url: "https://example.com/project3", // Ganti dengan URL tujuan
+  },
+  {
+    id: 12,
+    title: "PowerLink",
+    subtitle: "Cloud Computing Security.",
+    imgSrc: "/PowerLink.gif",
     url: "https://example.com/project3", // Ganti dengan URL tujuan
   },
 ];
@@ -51,9 +100,9 @@ const Projects: React.FC = () => {
     <section id="work" className="max-w-6xl mx-auto px-4 h-full py-[72px] lg:py-[102px] bg-black flex flex-col gap-12">
       {projects.map((project) => (
         <div
-          key={project.id}
+          // key={project.id}
           className="flex flex-col gap-6 group cursor-pointer"
-          onClick={() => window.open(project.url, "_blank")}
+          // onClick={() => window.open(project.url, "_blank")}
         >
           <div className="flex flex-col md:flex-row justify-between lg:items-center gap-4">
             {/* Title */}
