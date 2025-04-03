@@ -10,48 +10,104 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "NexiSphere",
-    subtitle: "NexiSphere Landing Page",
-    imgSrc: "/Nexisphere.mp4",
-    url: "https://example.com/project3",
+    "id": 1,
+    "title": "NexiSphere POS Dashboard",
+    "subtitle": "NexiSphere POS Dashboard",
+    "imgSrc": "/Nexisphere.mp4",
+    "url": "https://example.com/project3"
   },
   {
-    id: 2,
-    title: "Kanaka Dashboard",
-    subtitle: "ERP HR Dashboard Management App",
-    imgSrc: "/Kanakadashboard.png",
-    url: "https://example.com/project3",
+    "id": 2,
+    "title": "Kanaka Dashboard",
+    "subtitle": "ERP HR Dashboard Management App",
+    "imgSrc": "/Kanakadashboard.png",
+    "url": "https://example.com/project3"
   },
   {
-    id: 3,
-    title: "Onboarding Dashboard",
-    subtitle: "Trainual-inspired onboarding dashboard.",
-    imgSrc: "/Dashboard_.png",
-    url: "https://example.com/project1",
+    "id": 3,
+    "title": "Onboarding Dashboard",
+    "subtitle": "Trainual-inspired onboarding dashboard.",
+    "imgSrc": "/Dashboard_.png",
+    "url": "https://example.com/project1"
   },
   {
-    id: 4,
-    title: "Jaket Boat",
-    subtitle: "Boat ticket booking app by Dishub.",
-    imgSrc: "/Jaket Boat.png",
-    url: "https://example.com/project2",
+    "id": 4,
+    "title": "Jaket Boat",
+    "subtitle": "Boat ticket booking app by Dishub.",
+    "imgSrc": "/Jaket Boat.png",
+    "url": "https://example.com/project2"
   },
   {
-    id: 5,
-    title: "Legacy Of The Ancients : ELDORIA",
-    subtitle: "Epic RPG adventure in a mythical realm.",
-    imgSrc: "/Eldoria.gif",
-    url: "https://example.com/project3",
+    "id": 5,
+    "title": "Legacy Of The Ancients : ELDORIA",
+    "subtitle": "Epic RPG adventure in a mythical realm.",
+    "imgSrc": "/Eldoria.gif",
+    "url": "https://example.com/project3"
   },
   {
-    id: 6,
-    title: "iFortePay",
-    subtitle: "Connected Payment Solutions for Your Business Success.",
-    imgSrc: "/iforte.gif",
-    url: "https://example.com/project3",
+    "id": 6,
+    "title": "iFortePay",
+    "subtitle": "Connected Payment Solutions for Your Business Success.",
+    "imgSrc": "/iforte.gif",
+    "url": "https://example.com/project3"
   },
-];
+  {
+    "id": 7,
+    "title": "Crypnative",
+    "subtitle": "Free Online Image Editor.",
+    "imgSrc": "/Crypnative.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 8,
+    "title": "Glyph AI",
+    "subtitle": "Blockchain Landing Page.",
+    "imgSrc": "/Glyph AI.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 9,
+    "title": "Bitreon",
+    "subtitle": "Code Generator AI.",
+    "imgSrc": "/Bitreon.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 10,
+    "title": "Denode",
+    "subtitle": "Cloud Computing Landing Page.",
+    "imgSrc": "/Denode.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 11,
+    "title": "Injection Protocol",
+    "subtitle": "The World's AI Platform.",
+    "imgSrc": "/Injection Protocol.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 12,
+    "title": "Mingle",
+    "subtitle": "Free Chat Bot AI.",
+    "imgSrc": "/Mingle.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 13,
+    "title": "Podsphere",
+    "subtitle": "Podcast Stream Landing Page.",
+    "imgSrc": "/Podsphere.png",
+    "url": "https://example.com/project3"
+  },
+  {
+    "id": 14,
+    "title": "PowerLink",
+    "subtitle": "Cloud Computing Security.",
+    "imgSrc": "/PowerLink.gif",
+    "url": "https://example.com/project3"
+  }
+]
 
 const Projects: React.FC = () => {
   return (
