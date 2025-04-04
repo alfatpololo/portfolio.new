@@ -11,8 +11,8 @@ interface Project {
 const projects: Project[] = [
   {
     "id": 1,
-    "title": "NexiSphere POS Dashboard",
-    "subtitle": "NexiSphere POS Dashboard",
+    "title": "NexiSphere Landing Page",
+    "subtitle": "NexiSphere Landing Page",
     "imgSrc": "/Nexisphere.mp4",
     "url": "https://example.com/project3"
   },
