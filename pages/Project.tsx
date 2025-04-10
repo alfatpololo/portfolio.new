@@ -10,6 +10,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    "id": 0,
+    "title": "Fiverr Promo Motion Graphic",
+    "subtitle": "Mockup Motion Graphic",
+    "imgSrc": "/Fiverr.mp4",
+    "url": "https://example.com/project3"
+  },
+  {
     "id": 1,
     "title": "NexiSphere Landing Page",
     "subtitle": "NexiSphere Landing Page",
