@@ -144,7 +144,6 @@ const Projects: React.FC = () => {
                   controls
                   autoPlay
                   loop
-                  muted
                   className="rounded-md w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               ) : (
