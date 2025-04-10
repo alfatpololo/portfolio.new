@@ -13,7 +13,7 @@ const projects: Project[] = [
     "id": 0,
     "title": "Fiverr Promo Motion Graphic",
     "subtitle": "Mockup Motion Graphic",
-    "imgSrc": "/Fiverr.mp4",
+    "imgSrc": "/fiverr.mp4",
     "url": "https://example.com/project3"
   },
   {
@@ -144,6 +144,7 @@ const Projects: React.FC = () => {
                   controls
                   autoPlay
                   loop
+                  muted
                   className="rounded-md w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               ) : (
