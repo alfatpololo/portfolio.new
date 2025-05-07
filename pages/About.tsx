@@ -37,7 +37,7 @@ const About: React.FC = () => {
               <span className="text-gray-500 block">2021 - Present</span>
             </li>
             <li>
-              <span className="font-bold text-white block">MakeWebEasy</span>
+              <span className="font-bold text-white block">Clicknext. Co., Ltd</span>
               <span className="text-gray-400 block">Intern Web Designer</span>
               <span className="text-gray-500 block">2024</span>
             </li>
