@@ -32,6 +32,11 @@ const About: React.FC = () => {
           </p>
           <ul className="text-gray-400 leading-relaxed lg:text-[28px] space-y-6 text-start">
             <li>
+              <span className="font-bold text-white block">PT Technosoft Indo Prima</span>
+              <span className="text-gray-400 block">Product Designer</span>
+              <span className="text-gray-500 block">2025 - Present</span>
+            </li>
+            <li>
               <span className="font-bold text-white block">Freelancer</span>
               <span className="text-gray-400 block">UI/UX Designer | Web Developer</span>
               <span className="text-gray-500 block">2021 - Present</span>
