@@ -17,10 +17,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app: FirebaseApp;
-let db: Firestore;
-let storage: FirebaseStorage;
-let auth: Auth;
+let app: FirebaseApp | undefined;
+let db: Firestore | undefined;
+let storage: FirebaseStorage | undefined;
+let auth: Auth | undefined;
 
 if (typeof window !== 'undefined') {
   if (!getApps().length) {

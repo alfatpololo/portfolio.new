@@ -8,6 +8,9 @@ import {
 import { auth } from './config';
 
 export const login = async (email: string, password: string) => {
+  if (!auth) {
+    throw new Error('Firebase Auth not initialized');
+  }
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     return userCredential.user;
@@ -29,6 +32,9 @@ export const login = async (email: string, password: string) => {
 };
 
 export const register = async (email: string, password: string) => {
+  if (!auth) {
+    throw new Error('Firebase Auth not initialized');
+  }
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     return userCredential.user;
@@ -49,6 +55,9 @@ export const register = async (email: string, password: string) => {
 };
 
 export const logout = async () => {
+  if (!auth) {
+    throw new Error('Firebase Auth not initialized');
+  }
   try {
     await signOut(auth);
   } catch (error) {
@@ -58,8 +67,12 @@ export const logout = async () => {
 };
 
 export const getCurrentUser = (): Promise<User | null> => {
+  if (!auth) {
+    return Promise.resolve(null);
+  }
+  const authInstance = auth; // TypeScript type narrowing
   return new Promise((resolve) => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(authInstance, (user) => {
       unsubscribe();
       resolve(user);
     });

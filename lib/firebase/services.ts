@@ -16,6 +16,10 @@ import { Project, AboutData, HeroData, ContactData, Experience, ContactLink } fr
 
 // ============ PROJECTS ============
 export const getProjects = async (): Promise<Project[]> => {
+  if (!db) {
+    console.error('Firebase not initialized');
+    return [];
+  }
   try {
     const q = query(collection(db, 'projects'), orderBy('order', 'asc'));
     const querySnapshot = await getDocs(q);
@@ -32,6 +36,10 @@ export const getProjects = async (): Promise<Project[]> => {
 };
 
 export const getProject = async (id: string): Promise<Project | null> => {
+  if (!db) {
+    console.error('Firebase not initialized');
+    return null;
+  }
   try {
     const docRef = doc(db, 'projects', id);
     const docSnap = await getDoc(docRef);
@@ -51,6 +59,9 @@ export const getProject = async (id: string): Promise<Project | null> => {
 };
 
 export const createProject = async (project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(collection(db, 'projects'));
     await setDoc(docRef, {
@@ -66,6 +77,9 @@ export const createProject = async (project: Omit<Project, 'id' | 'createdAt' | 
 };
 
 export const updateProject = async (id: string, project: Partial<Omit<Project, 'id' | 'createdAt'>>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(db, 'projects', id);
     await updateDoc(docRef, {
@@ -79,6 +93,9 @@ export const updateProject = async (id: string, project: Partial<Omit<Project, '
 };
 
 export const deleteProject = async (id: string): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(db, 'projects', id);
     await deleteDoc(docRef);
@@ -90,6 +107,10 @@ export const deleteProject = async (id: string): Promise<void> => {
 
 // ============ ABOUT ============
 export const getAbout = async (): Promise<AboutData | null> => {
+  if (!db) {
+    console.error('Firebase not initialized');
+    return null;
+  }
   try {
     const docRef = doc(db, 'about', 'data');
     const docSnap = await getDoc(docRef);
@@ -110,6 +131,9 @@ export const getAbout = async (): Promise<AboutData | null> => {
 };
 
 export const updateAbout = async (aboutData: Omit<AboutData, 'id' | 'updatedAt'>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(db, 'about', 'data');
     await setDoc(docRef, {
@@ -124,6 +148,10 @@ export const updateAbout = async (aboutData: Omit<AboutData, 'id' | 'updatedAt'>
 
 // ============ HERO ============
 export const getHero = async (): Promise<HeroData | null> => {
+  if (!db) {
+    console.error('Firebase not initialized');
+    return null;
+  }
   try {
     const docRef = doc(db, 'hero', 'data');
     const docSnap = await getDoc(docRef);
@@ -142,6 +170,9 @@ export const getHero = async (): Promise<HeroData | null> => {
 };
 
 export const updateHero = async (heroData: Omit<HeroData, 'id' | 'updatedAt'>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(db, 'hero', 'data');
     await setDoc(docRef, {
@@ -156,6 +187,10 @@ export const updateHero = async (heroData: Omit<HeroData, 'id' | 'updatedAt'>): 
 
 // ============ CONTACT ============
 export const getContact = async (): Promise<ContactData | null> => {
+  if (!db) {
+    console.error('Firebase not initialized');
+    return null;
+  }
   try {
     const docRef = doc(db, 'contact', 'data');
     const docSnap = await getDoc(docRef);
@@ -175,6 +210,9 @@ export const getContact = async (): Promise<ContactData | null> => {
 };
 
 export const updateContact = async (contactData: Omit<ContactData, 'id' | 'updatedAt'>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase not initialized');
+  }
   try {
     const docRef = doc(db, 'contact', 'data');
     await setDoc(docRef, {
@@ -189,6 +227,9 @@ export const updateContact = async (contactData: Omit<ContactData, 'id' | 'updat
 
 // ============ STORAGE (File Upload) ============
 export const uploadFile = async (file: File, path: string): Promise<string> => {
+  if (!storage) {
+    throw new Error('Firebase Storage not initialized');
+  }
   try {
     const storageRef = ref(storage, path);
     await uploadBytes(storageRef, file);
@@ -201,6 +242,9 @@ export const uploadFile = async (file: File, path: string): Promise<string> => {
 };
 
 export const deleteFile = async (path: string): Promise<void> => {
+  if (!storage) {
+    throw new Error('Firebase Storage not initialized');
+  }
   try {
     const storageRef = ref(storage, path);
     await deleteObject(storageRef);
