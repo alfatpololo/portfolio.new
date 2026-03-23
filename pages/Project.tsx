@@ -10,6 +10,27 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 15,
+    title: "Landing Page Mkasir",
+    subtitle: "Landing page mKasir, aplikasi kasir dengan SOS button.",
+    imgSrc: "/mkasir landing page.png",
+    url: "https://example.com/mkasir-landing",
+  },
+  {
+    id: 16,
+    title: "Disiplinku",
+    subtitle: "Aplikasi kebiasaan & disiplin harian.",
+    imgSrc: "/disiplinku.png",
+    url: "https://example.com/disiplinku",
+  },
+  {
+    id: 17,
+    title: "Retail mKasir",
+    subtitle: "POS & manajemen retail untuk toko modern.",
+    imgSrc: "/mkasir-retail-pos.png",
+    url: "https://example.com/mkasir-retail",
+  },
+  {
     "id": 0,
     "title": "Fiverr Promo Motion Graphic",
     "subtitle": "Mockup Motion Graphic",
