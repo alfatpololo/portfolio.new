@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
               <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <a
-                href="/cv-muhammad-alfath-aditya.pdf"
+                href="https://docs.google.com/document/d/1tao7E7E3Rw-GxrsJHXbNXcYT0mPm8sgg-ic2GdlAuVE/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -11,20 +11,27 @@ interface Project {
 const projects: Project[] = [
   {
     id: 15,
+    title: "UI Craft Speaker",
+    subtitle: "Landing page mKasir, aplikasi kasir dengan SOS button.",
+    imgSrc: "/Sertifikat-UICRAFT.jpeg",
+    url: "_blank",
+  },
+  {
+    id: 16,
     title: "Landing Page Mkasir",
     subtitle: "Landing page mKasir, aplikasi kasir dengan SOS button.",
     imgSrc: "/mkasir landing page.png",
     url: "https://example.com/mkasir-landing",
   },
   {
-    id: 16,
+    id: 17,
     title: "Disiplinku",
     subtitle: "Aplikasi kebiasaan & disiplin harian.",
     imgSrc: "/disiplinku.png",
     url: "https://example.com/disiplinku",
   },
   {
-    id: 17,
+    id: 18,
     title: "Retail mKasir",
     subtitle: "POS & manajemen retail untuk toko modern.",
     imgSrc: "/mkasir-retail-pos.png",
@@ -153,7 +160,7 @@ const Projects: React.FC = () => {
                 </span>
               </span>
             </h2>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white lg:text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl lg:text-2xl font-medium text-white lg:text-center md:text-left">
               {project.subtitle}
             </h2>
           </div>

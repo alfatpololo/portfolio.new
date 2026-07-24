@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import HeroBackground from "@/components/HeroBackground";
 
 const Hero = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -63,10 +64,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="bg-black text-white h-[500px] z-30 lg:h-[700px] flex flex-col justify-center items-center px-4"
+      className="relative overflow-hidden bg-black text-white h-[500px] lg:h-[700px] flex flex-col justify-center items-center px-4"
     >
+      {/* Reusable SaaS Interactive Hero Background */}
+      <HeroBackground />
+
       <div
-        className="max-w-4xl text-center absolute cursor-grab mx-auto"
+        className="max-w-4xl text-center absolute cursor-grab mx-auto z-10"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
