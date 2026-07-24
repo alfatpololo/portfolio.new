@@ -16,9 +16,8 @@ const About: React.FC = () => {
         id="about"
       >
         <div
-          className={`max-w-5xl mx-auto transition-all duration-700 transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`max-w-5xl mx-auto transition-all duration-700 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           {/* Konten Teks */}
           <h2 className="lg:text-[52px] text-[37px] font-medium text-white text-start">
@@ -28,13 +27,18 @@ const About: React.FC = () => {
             UI/UX Engineer
           </h3>
           <p className="text-white leading-relaxed lg:text-[36px] text-[24px] mb-6">
-          Experienced Designer (7+ years) and Frontend Developer (3+ years) with a passion for creating innovative designs and seamless user experiences. Skilled in design strategy, process design, logos, and illustrations, paired with strong expertise in frontend technologies like HTML, CSS, JavaScript, ReactJS, Next.js, and TailwindCSS. I specialize in blending creativity and code to craft visually stunning and highly functional websites and applications.
+            Detail-oriented UI/UX Engineer and Designer with extensive experience in creating intuitive digital interfaces. Proven track record in developing wireframes, high-fidelity prototypes, and responsive websites using modern frameworks like React and Next.js. Skilled in bridging the gap between design and technology to enhance user satisfaction and business growth.
           </p>
           <ul className="text-gray-400 leading-relaxed lg:text-[28px] space-y-6 text-start">
             <li>
+              <span className="font-bold text-white block">Wistkey, Hongkong</span>
+              <span className="text-gray-400 block">UI/UX Designer</span>
+              <span className="text-gray-500 block">2025 - Present</span>
+            </li>
+            <li>
               <span className="font-bold text-white block">PT Technosoft Indo Prima</span>
               <span className="text-gray-400 block">Product Designer</span>
-              <span className="text-gray-500 block">2025 - Present</span>
+              <span className="text-gray-500 block">2025 - 2026</span>
             </li>
             <li>
               <span className="font-bold text-white block">Freelancer</span>

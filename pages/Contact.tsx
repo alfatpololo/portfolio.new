@@ -18,8 +18,9 @@ const Contact: React.FC = () => {
               <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 bg-white border-2 border-purple-800"></div>
               <a
-                href="/CV Muhammad Alfath Aditya.pdf"
-                download="CV Muhammad Alfath Aditya.pdf"
+                href="/cv-muhammad-alfath-aditya.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFileAlt className="text-gray-400 w-8 h-8 lg:w-10 lg:h-10 transition-all duration-300 group-hover:translate-y-[-5px]" />
               </a>
