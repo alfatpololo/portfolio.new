@@ -4,6 +4,7 @@ import { FLOATING_ELEMENTS } from "./constants";
 import { FloatingElement } from "./FloatingElement";
 import { GradientGlows } from "./GradientGlows";
 import { NoiseTexture } from "./NoiseTexture";
+import { CapsuleField } from "./CapsuleField";
 
 export interface HeroBackgroundProps {
   className?: string;
@@ -13,6 +14,7 @@ export interface HeroBackgroundProps {
  * HeroBackground Component
  * Premium interactive hero background component inspired by SaaS platforms (Antigravity, Linear, Vercel).
  * Features:
+ * - Interactive static field of 120 glowing capsules (rounded pill dashes)
  * - 10 floating geometric and glassmorphism elements
  * - Zero-re-render Framer Motion spring physics tracking cursor
  * - Ambient gradient glows & ultra-subtle noise texture
@@ -67,6 +69,9 @@ export const HeroBackground: React.FC<HeroBackgroundProps> = ({ className = "" }
 
       {/* Tactile Noise Texture Layer */}
       <NoiseTexture />
+
+      {/* Static Field of Glowing Pill Capsules */}
+      <CapsuleField mouseX={rawMouseX} mouseY={rawMouseY} />
 
       {/* Layered Floating Geometric & Glassmorphism Elements */}
       <div className="absolute inset-0 z-10">

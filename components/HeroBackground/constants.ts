@@ -1,4 +1,4 @@
-import { FloatingElementConfig } from "./types";
+import { FloatingElementConfig, CapsuleConfig } from "./types";
 
 /**
  * 10 Floating Geometric & Glassmorphism Elements
@@ -143,3 +143,70 @@ export const FLOATING_ELEMENTS: FloatingElementConfig[] = [
     floatDistance: 14,
   },
 ];
+
+/**
+ * Deterministically generates 120 static glowing capsules distributed evenly across the Hero canvas.
+ * Deterministic pseudo-randomness ensures SSR & client-side hydration render identically.
+ */
+function generateCapsules(count: number = 120): CapsuleConfig[] {
+  const capsules: CapsuleConfig[] = [];
+  const gradients: CapsuleConfig["gradientType"][] = [
+    "purple-blue",
+    "blue-pink",
+    "purple-pink",
+    "indigo-cyan",
+  ];
+
+  // Pseudo-random helper (Mulberry32 PRNG with fixed seed)
+  let seed = 4294967291;
+  const pseudoRandom = () => {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+
+  const cols = 12;
+  const rows = Math.ceil(count / cols);
+
+  for (let i = 0; i < count; i++) {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+
+    // Calculate base position with random jitter
+    const colWidth = 96 / cols;
+    const rowHeight = 96 / rows;
+
+    const leftVal = 2 + col * colWidth + pseudoRandom() * (colWidth * 0.8);
+    const topVal = 2 + row * rowHeight + pseudoRandom() * (rowHeight * 0.8);
+
+    const width = Math.floor(4 + pseudoRandom() * 10); // 4px to 14px length
+    const height = Math.floor(2 + pseudoRandom() * 3); // 2px to 5px thickness
+    const rotation = Math.floor(pseudoRandom() * 360 - 180);
+    const opacity = Number((0.2 + pseudoRandom() * 0.4).toFixed(2)); // 0.20 to 0.60
+    const depth = Number((0.25 + pseudoRandom() * 0.75).toFixed(2)); // 0.25 to 1.0
+    const floatDuration = Number((4.5 + pseudoRandom() * 4.5).toFixed(1)); // 4.5s to 9.0s
+    const floatDelay = Number((pseudoRandom() * 3.5).toFixed(1));
+    const floatDistance = Math.floor(3 + pseudoRandom() * 5); // 3px to 8px float
+    const gradientType = gradients[i % gradients.length];
+
+    capsules.push({
+      id: `capsule-${i}`,
+      top: `${topVal.toFixed(2)}%`,
+      left: `${leftVal.toFixed(2)}%`,
+      width,
+      height,
+      rotation,
+      opacity,
+      depth,
+      floatDuration,
+      floatDelay,
+      floatDistance,
+      gradientType,
+    });
+  }
+
+  return capsules;
+}
+
+export const CAPSULE_FIELD_ITEMS: CapsuleConfig[] = generateCapsules(120);

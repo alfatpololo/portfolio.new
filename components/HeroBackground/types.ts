@@ -34,3 +34,24 @@ export interface FloatingElementProps {
   /** Smooth spring motion value representing normalized mouse Y offset (-1 to 1) */
   mouseY: MotionValue<number>;
 }
+
+export interface CapsuleConfig {
+  id: string;
+  top: string;
+  left: string;
+  width: number; // width in px (2px to 14px)
+  height: number; // height in px (2px to 6px)
+  rotation: number; // angle -180 to 180
+  opacity: number; // 0.2 to 0.6
+  depth: number; // 0.2 to 1.0 depth factor
+  floatDuration: number; // seconds
+  floatDelay: number; // seconds
+  floatDistance: number; // px float distance (3px to 8px)
+  gradientType: "purple-blue" | "blue-pink" | "purple-pink" | "indigo-cyan";
+}
+
+export interface CapsuleItemProps {
+  config: CapsuleConfig;
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
+}
