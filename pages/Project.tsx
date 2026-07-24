@@ -12,7 +12,7 @@ const projects: Project[] = [
   {
     id: 15,
     title: "UI Craft Speaker",
-    subtitle: "Landing page mKasir, aplikasi kasir dengan SOS button.",
+    subtitle: "Speaker for UI Craft Event, design conference.",
     imgSrc: "/Sertifikat-UICRAFT.jpeg",
     url: "_blank",
   },
